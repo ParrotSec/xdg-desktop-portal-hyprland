@@ -1,0 +1,103 @@
+xdg-desktop-portal-hyprland (1.5.0-1parrot1) echo; urgency=medium
+
+  * New upstream release, matching Hyprland 0.57.2 and hyprtoolkit
+    0.6.0.
+
+ -- Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>  Fri, 20 Nov 2026 01:01:27 +0100
+
+xdg-desktop-portal-hyprland (1.5.0-1) unstable; urgency=medium
+
+  [ Carl Keinath ]
+  * New upstream version 1.5.0
+  * d/control: bump B-D hyprland-protocols to 0.8.0
+  * d/control: add libhyprtoolkit-dev to B-Ds
+  * wrap-and-sort debian dir
+
+  [ Chow Loong Jin ]
+  * d/control: Add versions to build-deps
+
+ -- Chow Loong Jin <hyperair@debian.org>  Sat, 31 Oct 2026 23:12:22 +0800
+
+xdg-desktop-portal-hyprland (1.4.1-1) unstable; urgency=medium
+
+  * New upstream version 1.4.1
+
+ -- Carl Keinath <carl.keinath@gmail.com>  Mon, 03 Aug 2026 13:37:45 +0800
+
+xdg-desktop-portal-hyprland (1.4.0-1) unstable; urgency=medium
+
+  * New upstream version 1.4.0
+  * d/rules: inject dpkg buildflags
+  * d/control: add uuid-dev to B-Deps
+
+ -- Carl Keinath <carl.keinath@gmail.com>  Thu, 23 Jul 2026 17:41:32 +0800
+
+xdg-desktop-portal-hyprland (1.3.12-1) unstable; urgency=medium
+
+  * New upstream version 1.3.12
+  * d/control:
+    - append Uploaders
+    - bump S-V to 4.7.4, remove RRR and Priority: optional
+
+ -- Carl Keinath <carl.keinath@gmail.com>  Mon, 27 Apr 2026 20:29:12 +0200
+
+xdg-desktop-portal-hyprland (1.3.11-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/control: added team-members to Uploaders
+
+ -- Carl Keinath <carl.keinath@gmail.com>  Fri, 17 Oct 2025 22:06:47 +0200
+
+xdg-desktop-portal-hyprland (1.3.10-1) unstable; urgency=medium
+
+  * New upstream release
+  * d/watch: Migrated to Version 5
+  * d/copyright: added email
+  * Moved VCS to team namespace
+
+ -- Carl Keinath <carl.keinath@gmail.com>  Sat, 04 Oct 2025 11:29:40 +0200
+
+xdg-desktop-portal-hyprland (1.3.8-3) unstable; urgency=medium
+
+  * New maintainer. (Closes: #1093708)
+  * Add recommended dependency as per upstream suggestion.
+  * Add upstream metadata.
+  * Add Salsa CI pipeline configuration.
+  * Add lintian override for hyprland-share-picker (no documentation).
+
+ -- Carl Keinath <carl.keinath@gmail.com>  Sat, 08 Mar 2025 21:57:01 +0100
+
+xdg-desktop-portal-hyprland (1.3.8-2) unstable; urgency=medium
+
+  * QA upload.
+  * Orphan the package. (See #1093708)
+
+ -- Boyuan Yang <byang@debian.org>  Tue, 21 Jan 2025 12:51:49 -0500
+
+xdg-desktop-portal-hyprland (1.3.8-1) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 31 Oct 2024 18:57:27 -0400
+
+xdg-desktop-portal-hyprland (1.3.8-1~exp1) experimental; urgency=medium
+
+  * New upstream version 1.3.8.
+  * debian/control: Build with sdbus-cpp 2.0.0. (Closes: #1086492)
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 31 Oct 2024 08:12:22 -0400
+
+xdg-desktop-portal-hyprland (1.3.6-1) unstable; urgency=medium
+
+  * New upstream version 1.3.6. (Closes: #1084740, #1084390)
+  * debian/control: Add new build-dependencies.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 31 Oct 2024 08:09:47 -0400
+
+xdg-desktop-portal-hyprland (1.3.3-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #1080034)
+  * debian/copyright: Update information about files under
+    protocols/ directory.
+
+ -- Boyuan Yang <byang@debian.org>  Sat, 07 Sep 2024 18:12:33 -0400

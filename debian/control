@@ -1,0 +1,48 @@
+Source: xdg-desktop-portal-hyprland
+Section: x11
+Maintainer: Parrot Dev Team <team@parrotsec.org>
+Uploaders: Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ cmake (>= 3.19),
+ hyprland-protocols (>= 0.8.0),
+ hyprwayland-scanner (>= 0.4.2),
+ libdrm-dev,
+ libgbm-dev,
+ libhyprlang-dev,
+ libhyprtoolkit-dev (>= 0.6.0),
+ libhyprutils-dev (>= 0.2.6),
+ libpipewire-0.3-dev (>= 1.1.82),
+ libsdbus-c++-dev (>= 2.0),
+ libspa-0.2-dev,
+ libwayland-dev,
+ pkgconf,
+ qt6-base-dev,
+ uuid-dev,
+ wayland-protocols (>= 1.39),
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+Homepage: https://github.com/hyprwm/xdg-desktop-portal-hyprland
+Vcs-Git: https://gitlab.com/parrotsec/packages/xdg-desktop-portal-hyprland.git
+Vcs-Browser: https://gitlab.com/parrotsec/packages/xdg-desktop-portal-hyprland
+
+Package: xdg-desktop-portal-hyprland
+Priority: optional
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ xdg-desktop-portal-gtk,
+Description: XDG Desktop Portal backend for Hyprland
+ This package provides an XDG Desktop Portal backend for Hyprland.
+ It is a program that lets other applications communicate swiftly with
+ the compositor through D-Bus.
+ .
+ You do not have to use xdg-desktop-portal-hyprland. Hyprland will work
+ with xdg-desktop-portal-wlr, but xdg-desktop-portal-hyprland has
+ more features, such as window sharing.
+ .
+ On the other hand, xdg-desktop-portal-hyprland will work on other
+ wlroots-based compositors, although limited to the xdg-desktop-portal-wlr
+ features (other will be disabled).

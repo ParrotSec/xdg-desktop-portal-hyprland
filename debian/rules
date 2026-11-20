@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	@echo 'blhc: ignore-line-regexp: .*CMake[A-Za-z]*CompilerABI\.cpp.*'
+	dh_auto_configure -- \
+		-DCMAKE_CXX_FLAGS="$(CXXFLAGS) $(CPPFLAGS)"
