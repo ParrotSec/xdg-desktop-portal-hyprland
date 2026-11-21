@@ -19,7 +19,7 @@ Index: xdg-desktop-portal-hyprland-1.5.0/hyprland-share-picker/CMakeLists.txt
    IMPORTED_TARGET
    hyprtoolkit>=0.6.0
    hyprutils>=0.2.6
-+  libaquamarine
++  aquamarine
 +  libdisplay-info
 +  libseat
 +  egl
