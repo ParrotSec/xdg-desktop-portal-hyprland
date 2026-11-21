@@ -1,0 +1,29 @@
+Description: Link hyprland-share-picker against its transitive libraries
+ hyprland-share-picker resolves GL, libdisplay-info and libseat symbols that
+ come in through libhyprtoolkit/libaquamarine. Relying on those libraries
+ recording the corresponding DT_NEEDED entries breaks on toolchains where
+ --as-needed is the default for the build, leaving
+ "libhyprtoolkit.so: undefined reference to `glDeleteBuffers'" and friends at
+ link time.
+ .
+ Request the libraries explicitly through pkg-config so the link is
+ self-contained.
+Origin: Parrot
+Forwarded: not-needed
+Last-Update: 2026-11-20
+Index: xdg-desktop-portal-hyprland-1.5.0/hyprland-share-picker/CMakeLists.txt
+===================================================================
+--- xdg-desktop-portal-hyprland-1.5.0.orig/hyprland-share-picker/CMakeLists.txt
++++ xdg-desktop-portal-hyprland-1.5.0/hyprland-share-picker/CMakeLists.txt
+@@ -18,6 +18,11 @@ pkg_check_modules(
+   IMPORTED_TARGET
+   hyprtoolkit>=0.6.0
+   hyprutils>=0.2.6
++  libaquamarine
++  libdisplay-info
++  libseat
++  egl
++  glesv2
+   libdrm)
+ 
+ add_executable(hyprland-share-picker main.cpp Picker.cpp PickerData.cpp
